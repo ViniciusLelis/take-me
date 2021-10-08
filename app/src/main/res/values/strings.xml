@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">take me</string>
+    <string name="account_acttivity_title">Plan your trip</string>
+    <string name="account_acttivity_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mollis iaculis faucibus. Nullam fringilla eros vitae dolor laoreet maximus.</string>
+    <string name="account_signup_question">Don\'t have an account yet?</string>
+    <string name="log_in">Log in</string>
+    <string name="create_account">Create account</string>
+</resources>
