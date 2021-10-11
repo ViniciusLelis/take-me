@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Account">
         <activity
+            android:name=".account.LoginActivity"
+            android:exported="true" />
+        <activity
             android:name=".account.AccountSignActivity"
             android:exported="true"
             android:theme="@style/Theme.Splash">

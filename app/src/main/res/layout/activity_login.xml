@@ -2,24 +2,35 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Theme.Account"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    style="@style/Theme.Account"
     tools:context=".account.AccountSignActivity">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="360dp"
+        android:layout_width="252dp"
         android:layout_height="260dp"
         android:layout_marginTop="24dp"
         android:adjustViewBounds="true"
         android:contentDescription="@string/app_name"
         android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/account_img"
+        app:srcCompat="@drawable/log_in_img"
         tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/imageViewBack"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/return_to_last_screen"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTitle"
+        app:layout_constraintStart_toStartOf="@+id/buttonLogin"
+        app:layout_constraintTop_toTopOf="@+id/textViewTitle"
+        app:srcCompat="@drawable/arrow_left" />
 
     <TextView
         android:id="@+id/textViewTitle"
@@ -27,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_extrabold"
-        android:text="@string/account_activity_title"
+        android:text="@string/log_in"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="28sp"
@@ -36,22 +47,72 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <TextView
-        android:id="@+id/textViewSubtitle"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_light"
-        android:paddingLeft="40dp"
-        android:paddingRight="40dp"
-        android:text="@string/account_activity_subtitle"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:textStyle="normal"
+        android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle">
+
+        <EditText
+            android:id="@+id/editTextTextEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="16dp"
+            android:autofillHints="emailAddress"
+            android:background="@drawable/edittext_white_bg"
+            android:elevation="4dp"
+            android:ems="10"
+            android:hint="@string/e_mail"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="20dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="20dp"
+            android:textColorHint="@color/medium_grey"
+            android:textSize="16sp"
+            tools:ignore="TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/edittext_white_bg"
+            android:elevation="4dp"
+            android:ems="10"
+            android:hint="@string/password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="20dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="20dp"
+            android:textColorHint="@color/medium_grey"
+            android:textSize="16sp"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/textViewForgotPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/forgot_password"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/buttonLogin"
@@ -71,7 +132,7 @@
         app:layout_constraintBottom_toTopOf="@+id/textViewConnectWith"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextContrastCheck" />
+        tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
     <TextView
         android:id="@+id/textViewConnectWith"
@@ -79,7 +140,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:fontFamily="@font/roboto_light"
-        android:text="@string/account_signup_question"
+        android:text="@string/connect_with"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="14sp"
@@ -98,9 +159,10 @@
         android:background="@drawable/button_white_bg"
         android:elevation="4dp"
         android:fontFamily="@font/poppins_extrabold"
+        android:includeFontPadding="false"
         android:paddingTop="20dp"
         android:paddingBottom="20dp"
-        android:text="@string/create_account"
+        android:text="@string/google"
         android:textAllCaps="false"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"

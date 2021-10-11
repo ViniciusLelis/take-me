@@ -1,8 +1,14 @@
 <resources>
     <string name="app_name">take me</string>
-    <string name="account_acttivity_title">Plan your trip</string>
-    <string name="account_acttivity_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mollis iaculis faucibus. Nullam fringilla eros vitae dolor laoreet maximus.</string>
+    <string name="account_activity_title">Plan your trip</string>
+    <string name="account_activity_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mollis iaculis faucibus. Nullam fringilla eros vitae dolor laoreet maximus.</string>
     <string name="account_signup_question">Don\'t have an account yet?</string>
+    <string name="connect_with">or connect with</string>
     <string name="log_in">Log in</string>
     <string name="create_account">Create account</string>
+    <string name="google">Google</string>
+    <string name="e_mail">E-mail</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot your password?</string>
+    <string name="return_to_last_screen">Return to last screen</string>
 </resources>
